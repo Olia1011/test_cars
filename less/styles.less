@@ -531,41 +531,39 @@ ol {
             color: @secondary_color_200;
         }
 
+        &:focus {
+            border: 1px solid @secondary_color_200;
+            background-image: none;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            color: @secondary_color_200;
+        }
+
         &:required:invalid,
-        &:required:valid {
+        &:required:focus:valid {
             background-color: transparent;
             outline: none;
             -webkit-box-shadow: none;
             box-shadow: none;
+            // background-image: url(../image/close.svg);
+            // background-repeat: no-repeat;
+            // background-position: 97% 50%;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            color: @secondary_color_200;
+        }
+
+        .not_valid {
             background-image: url(../image/close.svg);
             background-repeat: no-repeat;
             background-position: 97% 50%;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            color: @secondary_color_200;
         }
-
-        &:required:invalid {
-            &:after {
-                position: absolute;
-                content: 'invalid';
-                bottom: -5px;
-                left: 0;
-            }
-        }
-
-        &:required:valid {
+        .valid{
             background-image: url(../image/check.svg);
         }
 
-        &:focus {
-            border: 1px solid @secondary_color_200;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            color: @secondary_color_200;
-        }
     }
 
     .subscribe_btn,

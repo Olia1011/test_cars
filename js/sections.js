@@ -25,13 +25,16 @@ $(document).ready(function() {
             var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
             if (pattern.test($(this).val())) {
                 $(this).css({ 'border': '1px solid #507A36' });
+                $('#mail_input').addClass('valid');
                 $('#mistake_mail').text('');
             } else {
                 $(this).css({ 'border': '1px solid #DF4E3C' });
-                $('#mistake_mail').text('Incorrect email').css({ 'color': 'red' });
+                $('#mail_input').addClass('not_valid');
+                $('#mistake_mail').text('Incorrect email').css({ 'color': '#DF4E3C' });
             }
         } else {
-            $(this).css({ 'border': '1px solid #8D8D8D' });
+            $(this).css({ 'border': '1px solid #8D8D8D', 'background-image': 'none' });
+            $('#mistake_mail').text('');
         }
     });
 

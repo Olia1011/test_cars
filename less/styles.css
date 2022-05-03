@@ -439,35 +439,32 @@ ol {
   line-height: 20px;
   color: #8D8D8D;
 }
+.newsletter_section .mail_input:focus {
+  border: 1px solid #8D8D8D;
+  background-image: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
 .newsletter_section .mail_input:required:invalid,
-.newsletter_section .mail_input:required:valid {
+.newsletter_section .mail_input:required:focus:valid {
   background-color: transparent;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
+.newsletter_section .mail_input .not_valid {
   background-image: url(../image/close.svg);
   background-repeat: no-repeat;
   background-position: 97% 50%;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  color: #8D8D8D;
 }
-.newsletter_section .mail_input:required:invalid:after {
-  position: absolute;
-  content: 'invalid';
-  bottom: -5px;
-  left: 0;
-}
-.newsletter_section .mail_input:required:valid {
+.newsletter_section .mail_input .valid {
   background-image: url(../image/check.svg);
-}
-.newsletter_section .mail_input:focus {
-  border: 1px solid #8D8D8D;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  color: #8D8D8D;
 }
 .newsletter_section .subscribe_btn,
 .newsletter_section .subscribe_btn:focus,
