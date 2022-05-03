@@ -32,7 +32,6 @@ $(document).ready(function() {
             }
         } else {
             $(this).css({ 'border': '1px solid #8D8D8D' });
-            $('#mistake_mail').text('Поле email не должно быть пустым');
         }
     });
 
@@ -81,7 +80,7 @@ $(document).ready(function() {
 
                     $('select').val(chooseItem).attr('selected', 'selected');
                     selectHead.text($(this).find('span').text());
-                    selectHead.css({ 'border': '1px solid #DF4E3C' })
+                    selectHead.css({ 'border': '1px solid #DF4E3C' });
                     selectList.slideUp(duration);
                     selectHead.removeClass('on');
                 });

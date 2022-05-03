@@ -102,6 +102,7 @@ ol {
   font-size: 20px;
   line-height: 27px;
   color: #f8f8f8;
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 .header_banner .browse_btn:hover,
@@ -145,6 +146,91 @@ ol {
   border: 2px solid #DF4E3C;
   color: #DF4E3C;
   background-color: transparent;
+}
+.offers_section .select {
+  display: block;
+  max-width: 170px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+}
+.offers_section .new-select {
+  position: relative;
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  padding: 13px 16px;
+  min-width: 170px;
+  max-width: 170px;
+  min-height: 48px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: url(../image/dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: 94%;
+  padding-right: 30px;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.offers_section .new-select__list {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  border: 1px solid #C4C4C4;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  background: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.offers_section .new-select__list.on {
+  display: block;
+}
+.offers_section .new-select__item span {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 12px;
+}
+.offers_section .new-select__item span:hover {
+  color: #DF4E3C;
+}
+.offers_section .new-select:after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  background: url('path-to-image') no-repeat right center / cover;
+  opacity: 0.6;
+  -webkit-transition: all 0.27s ease-in-out;
+  -o-transition: all 0.27s ease-in-out;
+  transition: all 0.27s ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.offers_section .new-select.on:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .offers_section .sort_row .sort_col .sort_span {
   font-weight: 400;
@@ -250,6 +336,34 @@ ol {
   min-height: 54px;
   position: relative;
 }
+.newsletter_section .mail_input::-webkit-input-placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
+.newsletter_section .mail_input::-moz-placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
+.newsletter_section .mail_input:-ms-input-placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
+.newsletter_section .mail_input::-ms-input-placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8D8D8D;
+}
 .newsletter_section .mail_input::placeholder {
   color: #f8f8f8;
   font-weight: 400;
@@ -261,6 +375,7 @@ ol {
 .newsletter_section .mail_input:required:valid {
   background-color: transparent;
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   background-image: url(../image/close.svg);
   background-repeat: no-repeat;
@@ -296,6 +411,7 @@ ol {
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .newsletter_section .subscribe_btn:hover,
@@ -364,91 +480,17 @@ ol {
 .footer .icons_div {
   width: 30%;
 }
-.select {
-  display: block;
-  max-width: 170px;
-  width: 100%;
-  background-color: transparent;
-  position: relative;
-}
-.new-select {
-  position: relative;
-  padding: 10px 15px;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid #BDBDBD;
-  border-radius: 15px;
-  padding: 13px 16px;
-  min-width: 170px;
-  max-width: 170px;
-  min-height: 48px;
-  appearance: none;
-  background-color: transparent;
-  background-image: url(../image/dropdown.svg);
-  background-repeat: no-repeat;
-  background-position: 94%;
-  padding-right: 30px;
-  white-space: nowrap;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.new-select__list {
-  position: absolute;
-  top: 52px;
-  left: 0;
-  border: 1px solid #C4C4C4;
-  border-radius: 15px;
-  cursor: pointer;
-  width: 100%;
-  z-index: 2;
-  background: #ffffff;
-  user-select: none;
-}
-.new-select__list.on {
-  display: block;
-}
-.new-select__item span {
-  display: block;
-  padding: 10px 15px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 12px;
-}
-.new-select__item span:hover {
-  color: #DF4E3C;
-}
-.new-select:after {
-  content: '';
-  display: block;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  right: 9px;
-  top: 9px;
-  background: url('path-to-image') no-repeat right center / cover;
-  opacity: 0.6;
-  -webkit-transition: all 0.27s ease-in-out;
-  -o-transition: all 0.27s ease-in-out;
-  transition: all 0.27s ease-in-out;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-.new-select.on:after {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
 input[type='checkbox'] {
   display: none;
 }
 input[type='checkbox'] + label {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0.5em 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #8D8D8D;
   font-size: 12px;
@@ -477,8 +519,14 @@ input[type='checkbox'] + label > ins > i {
   color: #DF4E3C;
 }
 input[type='checkbox'] + label > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 1em;
   width: 20px;
